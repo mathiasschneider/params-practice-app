@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get "/query_upcase", controller: "params", action: "upcase_method"
+  
+  get "/segment_upcase/:input_phrase", controller: "params", action: "upcase_method"
+
+  post "/body_upcase", controller: "params", action: "upcase_method"
 end
